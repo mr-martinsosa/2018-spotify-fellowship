@@ -2,14 +2,14 @@ function sortByStrings(s,t){
     // initialize empty string variable to return later
     let sortedString = ""
 
-    // loop through the first string
-    for(let i = 0; i < s.length; i++){
-        // loop through second string to match letters
-        for(let j = 0; i < t.length; j++){
+    // loop through the second string
+    for(let i = 0; i < t.length; i++){
+        // loop through first string to match current letter on second string
+        for(let j = 0; j < s.length; j++){
             // check if letters match
-            if(s[i] === t[j]){
+            if(t[i] === s[j]){
                 // append letter to sortedString
-                sortedString += s[i] 
+                sortedString += t[i] 
             }
         }
     }
