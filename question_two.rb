@@ -24,8 +24,12 @@ def decode_string(s)
     end
     reversed_hash = Hash[hash.to_a.reverse] #reverse hash to loop backwards
     reversed_hash.each do |key, array|
-        array.reverse.each do |char| #reverse array to get original order of chars back 
-            decoded_string += char #append chars to decoded_string being built in loop
+        if(array.length > 1)
+            array.reverse.each do |char| #reverse array to get original order of chars back 
+                decoded_string += char #append chars to decoded_string being built in loop
+            end
+        else
+            decoded_string += array[0] #append first character since array length is 1
         end
         decoded_string = decoded_string.reverse #reverse string order if we were dealing with single element arrays
         decoded_string *= key.to_i 
