@@ -17,6 +17,6 @@ function sortByStrings(s,t){
     return sortedString
 }
 
-/* Test functions */
+/* Test cases */
 console.log(sortByStrings("weather", "therapyw")) // returns "theeraw"
 console.log(sortByStrings("good", "odg")) // returns "oodg"

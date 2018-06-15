@@ -37,5 +37,6 @@ def decode_string(s)
     decoded_string
 end
 
+#Test cases
 p decode_string("4[ab]") #"abababab"
 p decode_string("2[b3[a]]") #"baaabaaa"
